@@ -17,10 +17,13 @@ do_install () {
    make install DESTDIR=${D}
    rm -r ${D}/usr/local/bin 
    rm -r ${D}/usr/local/sbin/i2c-stub-from-dump
+   rm -r ${D}/usr/local/share
+   rm -r ${D}/usr/local/include
 }
 
 inherit pkgconfig
 
+FILES_${PN}-dbg += "/usr/local/sbin/.debug"
 FILES_${PN} = "/usr/local/sbin/i2c*"
 
 INSANE_SKIP_i2c-tools += "installed_vs_shipped"
