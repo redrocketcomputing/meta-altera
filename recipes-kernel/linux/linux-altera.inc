@@ -1,5 +1,5 @@
 PR = "r1"
-SRC_URI = "git://git.rocketboards.org/linux-socfpga.git;protocol=http;branch=socfpga-${PV}"
+SRC_URI = "git://github.com/redrocketcomputing/linux-socfpga.git;protocol=git;branch=socfpga-${PV}"
 
 SRCREV_pn-${PN} = "${AUTOREV}"
 
